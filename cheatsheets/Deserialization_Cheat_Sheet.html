@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
       
@@ -1704,7 +1704,7 @@
 <p>Even if you have limited the types that can be deserialised remember that some types have properties that are risky. <code>System.ComponentModel.DataAnnotations.ValidationException</code>, for example has a property <code>Value</code> of type <code>Object</code>. if this type is the type allowed for deserialization then an attacker can set the <code>Value</code> property to any object type they choose.</p>
 <p>Attackers should be prevented from steering the type that will be instantiated. If this is possible then even <code>DataContractSerializer</code> or <code>XmlSerializer</code> can be subverted e.g.</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">// Action below is dangerous if the attacker can change the data in the database</span>
-<span class="kt">var</span> <span class="n">typename</span> <span class="p">=</span> <span class="n">GetTransactionTypeFromDatabase</span><span class="p">();</span>  
+<span class="kt">var</span> <span class="n">typename</span> <span class="p">=</span> <span class="n">GetTransactionTypeFromDatabase</span><span class="p">();</span>
 
 <span class="kt">var</span> <span class="n">serializer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataContractJsonSerializer</span><span class="p">(</span><span class="n">Type</span><span class="p">.</span><span class="n">GetType</span><span class="p">(</span><span class="n">typename</span><span class="p">));</span>
 
@@ -1875,14 +1875,14 @@
     </div>
     
       <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
